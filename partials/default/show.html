@@ -1,0 +1,113 @@
+<h1>{{character.name}} <small>A character for {{character.game.longname}}</small></h1>
+<p>{{character.description}}</p>
+<div class="row">
+	<div class="large-4 columns">
+		<h2>Abilities</h2>
+		<table>
+			<tr>
+				<th>Name</th>
+				<th>Description</th>
+				<th>Type</th>
+			</tr>
+			<tr ng-repeat="ability in character.abilities">
+				<td>{{ability.name}}</td>
+				<td>{{ability.description}}</td>
+				<td>{{ability.type}}</td>
+			</tr>
+		</table>
+		<h2>Stats</h2>
+		<table>
+			<tr>
+				<th>Name</th>
+				<th>Score</th>
+				<th>Bonus</th>
+			</tr>
+			<tr ng-repeat="stat in character.stats">
+				<td>{{stat.name}}</td>
+				<td>{{stat.score}}</td>
+				<td>{{stat.bonus}}</td>
+			</tr>
+		</table>
+		<h2>Skills</h2>
+		<table>
+			<tr>
+				<th>Name</th>
+				<th>Bonus</th>
+				<th>Stat</th>
+			</tr>
+			<tr ng-repeat="skill in character.skills">
+				<td>{{skill.name}}</td>
+				<td>{{skill.bonus}}</td>
+				<td>{{skill.stat}}</td>
+			</tr>
+		</table>
+	</div>
+	<div class="large-4 columns">
+		<h2>Inventory</h2>
+		<table>
+			<tr>
+				<th>Name</th>
+				<th>Description</th>
+				<th>Amount</th>
+				<th>Bonus</th>
+			</tr>
+			<tr ng-repeat="item in character.inventory">
+				<td>{{item.name}}</td>
+				<td>{{item.description}}</td>
+				<td>{{item.amount}}</td>
+				<td>{{item.bonus}}</td>
+			</tr>
+		</table>
+	</div>
+	<div class="large-4 columns">
+		<h2>Weapons</h2>
+		<table>
+			<tr>
+				<th>Name</th>
+				<th>Damage</th>
+				<th>Bonus</th>
+				<th>Effect</th>
+				<th>Description</th>
+			</tr>
+			<tr ng-repeat="weapon in character.weapons">
+				<td>{{weapon.name}}</td>
+				<td>{{weapon.damage}}</td>
+				<td>{{weapon.bonus}}</td>
+				<td>{{weapon.effect}}</td>
+				<td>{{weapon.description}}</td>
+			</tr>
+		</table>
+		<h2>Armors</h2>
+		<table>
+			<tr>
+				<th>Name</th>
+				<th>Defense</th>
+				<th>Effect</th>
+				<th>Description</th>
+			</tr>
+			<tr ng-repeat="armor in character.armors">
+				<td>{{armor.name}}</td>
+				<td>{{armor.defense}}</td>
+				<td>{{armor.description}}</td>
+				<td>{{armor.effect}}</td>
+			</tr>
+		</table>
+		<h2>Spells</h2>
+		<table>
+			<tr>
+				<th>Name</th>
+				<th>Damage</th>
+				<th>Bonus</th>
+				<th>Effect</th>
+				<th>Description</th>
+			</tr>
+			<tr ng-repeat="spell in character.spells">
+				<td>{{spell.name}}</td>
+				<td>{{spell.damage}}</td>
+				<td>{{spell.bonus}}</td>
+				<td>{{spell.effect}}</td>
+				<td>{{spell.description}}</td>
+			</tr>
+		</table>
+	</div>
+</div>

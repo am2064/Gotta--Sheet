@@ -8,34 +8,40 @@
 	</dl>
 	<div class="tabs-content">
 		<div class="content active" ng-init="tabs = 'main'" ng-class="{'active': tabs == 'main'}">
-			<h2>Abilities</h2>
-			<table>
-				<tr>
-					<th>Ability</th>
-					<th>Score</th>
-					<th>Bonus</th>
-				</tr>
-				<tr ng-repeat="stat in character.stats">
-					<td>{{stat.name}}</td>
-					<td>{{stat.score}}</td>
-					<td>{{stat.bonus}}</td>
-				</tr>
-			</table>
-			<h2>Skills</h2>
-			<table>
-				<tr>
-					<th>Skill</th>
-					<th>Bonus</th>
-					<th>Ranks</th>
-					<th>Stat</th>
-				</tr>
-				<tr ng-repeat="skill in character.skills">
-					<td>{{skill.name}}</td>
-					<td>{{skill.bonus}}</td>
-					<td>-</td>
-					<td>-</td>
-				</tr>
-			</table>
+			<div class="row">
+				<div class="small-6 columns">
+					<h2>Abilities</h2>
+					<table>
+						<tr>
+							<th>Ability</th>
+							<th>Score</th>
+							<th>Bonus</th>
+						</tr>
+						<tr ng-repeat="stat in character.stats">
+							<td>{{stat.name}}</td>
+							<td>{{stat.score}}</td>
+							<td>{{stat.bonus}}</td>
+						</tr>
+					</table>
+				</div>
+				<div class="small-6 columns">
+					<h2>Skills</h2>
+					<table>
+						<tr>
+							<th>Skill</th>
+							<th>Bonus</th>
+							<th>Ranks</th>
+							<th>Stat</th>
+						</tr>
+						<tr ng-repeat="skill in character.skills">
+							<td>{{skill.name}}</td>
+							<td>{{skill.bonus}}</td>
+							<td>-</td>
+							<td>-</td>
+						</tr>
+					</table>
+				</div>
+			</div>
 		</div>
 		<div class="content" ng-class="{'active': tabs == 'inventory'}">
 			<h2>Inventory</h2>
